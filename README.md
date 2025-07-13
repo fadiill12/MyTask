@@ -26,3 +26,21 @@ Aplikasi Android untuk pengelolaan dan pengiriman tugas berbasis mobile dengan d
 - **Node.js + Express** (sebagai backend server)
 - **Cloudinary** (untuk storage file tugas JPG/PNG/JPEG)
 - **SHA-256 Encryption** (untuk enkripsi password)
+
+
+## 🔌 Firebase Configuration in Code
+
+### 📍 RegisterActivity.java
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.register_activity);
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance("YOUR URL FIREBASE REALTIME DATABASE");
+    databaseReference = database.getReference();
+
+    initViews();
+    setupClickListeners();
+}
