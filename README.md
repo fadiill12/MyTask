@@ -252,7 +252,7 @@ Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_co
 - Backend harus berjalan sebelum menggunakan fitur upload di aplikasi Android
 - Simpan file `.env` dengan aman dan jangan commit ke repository publik
 - Untuk production, gunakan HTTPS dan implementasikan autentikasi yang lebih robust
-- Pastikan `BASE_URL` di `DashboardSiswaActivity` sesuai dengan server backend yang berjalan
+- Pastikan `BASE_URL` di `DashboardSiswaActivity` dan `DashboardGuruActivity` sesuai dengan server backend yang berjalan
 
 ---
 
