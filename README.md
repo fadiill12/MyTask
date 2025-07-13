@@ -160,6 +160,34 @@ Backend menyediakan endpoint untuk:
 - `POST /upload`: Upload file tugas ke Cloudinary
 - `GET /files`: Mengambil daftar file berdasarkan kelas dan mata pelajaran
 
+### 📍 Network Security Configuration
+
+Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_config.xml` di folder `res/xml/`:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">YOUR IP VPS/PC WHERE BACKEND RUN</domain>
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>
+```
+
+**Penjelasan Konfigurasi:**
+- `YOUR IP VPS/PC WHERE BACKEND RUN`: Ganti dengan IP address server backend Anda
+- `localhost`: Untuk testing di local development
+- `10.0.2.2`: IP address default Android emulator untuk mengakses host machine
+
+**Implementasi di AndroidManifest.xml:**
+```xml
+<application
+    android:networkSecurityConfig="@xml/network_security_config"
+    ... >
+</application>
+```
+
 ---
 
 ## 🚀 Cara Menjalankan Aplikasi
@@ -174,8 +202,10 @@ Backend menyediakan endpoint untuk:
 ### 🔸 Setup Android App
 1. Buka project di Android Studio
 2. Ganti `"YOUR URL FIREBASE REALTIME DATABASE"` dengan URL Firebase Realtime Database Anda
-3. Update URL backend di aplikasi Android (biasanya `http://localhost:3000` untuk testing)
-4. Build dan jalankan aplikasi di device/emulator Android
+3. Buat file `network_security_config.xml` di folder `res/xml/` (lihat bagian Network Security Configuration)
+4. Tambahkan `android:networkSecurityConfig="@xml/network_security_config"` di AndroidManifest.xml
+5. Update URL backend di aplikasi Android (sesuaikan dengan IP/domain backend)
+6. Build dan jalankan aplikasi di device/emulator Android
 
 ### 🔸 Testing
 1. Pastikan backend berjalan di port 3000
@@ -207,3 +237,6 @@ Backend menyediakan endpoint untuk:
 - Pastikan URL Firebase sudah benar
 - Cek network permissions di AndroidManifest.xml
 - Verifikasi URL backend sesuai dengan server yang berjalan
+- Pastikan `network_security_config.xml` sudah dikonfigurasi dengan benar
+- Untuk testing di emulator, gunakan IP `10.0.2.2:3000` sebagai URL backend
+- Untuk testing di device fisik, gunakan IP address komputer/server yang menjalankan backend
