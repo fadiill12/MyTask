@@ -45,9 +45,9 @@ protected void onCreate(Bundle savedInstanceState) {
     setupClickListeners();
 }
 
-#### 📍 LoginActivity.java
 
-```java
+📍 LoginActivity.java
+
  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
