@@ -110,6 +110,14 @@ Konfigurasi backend untuk dashboard siswa dan fitur upload tugas:
 private static final String BASE_URL = "http://YOUR IP VPS/PC WHERE BACKEND RUNNING:3000/"; // Pastikan IP dan port sesuai
 ```
 
+### 📍 DashboardGuruActivity.java
+
+Konfigurasi backend untuk dashboard siswa dan fitur upload tugas:
+
+```java
+private static final String BASE_URL = "http://YOUR IP VPS/PC WHERE BACKEND RUNNING:3000/"; // Pastikan IP dan port sesuai
+```
+
 **Fungsi Utama DashboardSiswaActivity:**
 - Menampilkan dashboard siswa
 - Mengatur koneksi ke backend server untuk upload tugas
