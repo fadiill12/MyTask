@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">MyTask</string>
+    <string-array name="role_array">
+        <item>Pilih Role</item>
+        <item>Siswa</item>
+        <item>Guru</item>
+    </string-array>
+
+    <string name="cloudinary_cloud_name">dqabyvd80</string>
+    <string name="cloudinary_api_key">493195166979121</string>
+    <string name="cloudinary_api_secret">541qtFoDhbF-38kN4-k7yu4wGC4</string>
+
+    <string name="dashboard_title">Dashboard Siswa</string>
+    <string name="upload_task_subtitle">Upload Tugas Anda</string>
+    <string name="select_class">Pilih Kelas</string>
+    <string name="select_subject">Mata Pelajaran</string>
+    <string name="upload_image">Upload Gambar Tugas</string>
+    <string name="choose_image">Pilih Gambar</string>
+    <string name="no_file_selected">Belum ada gambar yang dipilih</string>
+    <string name="submit_task">SUBMIT TUGAS</string>
+    <string name="logout">LOGOUT</string>
+
+    <string name="upload_success">Tugas berhasil diupload!</string>
+    <string name="upload_failed">Gagal mengupload tugas</string>
+    <string name="please_select_class">Pilih kelas terlebih dahulu</string>
+    <string name="please_select_subject">Pilih mata pelajaran terlebih dahulu</string>
+    <string name="please_select_image">Pilih gambar terlebih dahulu</string>
+    <string name="uploading">Mengupload...</string>
+
+    <string-array name="kelas_options">
+        <item>Pilih Kelas</item>
+        <item>X MIPA 1</item>
+        <item>X MIPA 2</item>
+        <item>X MIPA 3</item>
+        <item>X IPS 1</item>
+        <item>X IPS 2</item>
+        <item>XI MIPA 1</item>
+        <item>XI MIPA 2</item>
+        <item>XI IPS 1</item>
+        <item>XII MIPA 1</item>
+        <item>XII MIPA 2</item>
+        <item>XII IPS 1</item>
+    </string-array>
+
+    <string-array name="mata_pelajaran_options">
+        <item>Pilih Mata Pelajaran</item>
+        <item>Matematika</item>
+        <item>Bahasa Indonesia</item>
+        <item>Bahasa Inggris</item>
+        <item>Fisika</item>
+        <item>Kimia</item>
+        <item>Biologi</item>
+        <item>Sejarah</item>
+        <item>Geografi</item>
+        <item>Ekonomi</item>
+        <item>Sosiologi</item>
+        <item>PKN</item>
+        <item>Agama</item>
+        <item>Seni Budaya</item>
+        <item>Olahraga</item>
+    </string-array>
+
+</resources>

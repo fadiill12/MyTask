@@ -1,0 +1,41 @@
+[debug] [2025-06-16T03:38:36.314Z] ----------------------------------------------------------------------
+[debug] [2025-06-16T03:38:36.317Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2025-06-16T03:38:36.318Z] CLI Version:   14.7.0
+[debug] [2025-06-16T03:38:36.318Z] Platform:      win32
+[debug] [2025-06-16T03:38:36.318Z] Node Version:  v22.12.0
+[debug] [2025-06-16T03:38:36.318Z] Time:          Mon Jun 16 2025 10:38:36 GMT+0700 (Western Indonesia Time)
+[debug] [2025-06-16T03:38:36.318Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-16T03:38:36.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-16T03:38:36.329Z] > authorizing via signed-in user (who84695@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ASUS\AndroidStudioProjects\MyTask
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-16T03:41:40.683Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:524:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:263:20)
+    at ReadStream.emit (node:events:536:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.

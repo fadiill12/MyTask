@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_blue">#2196F3</color>
+    <color name="light_blue_50">#E3F2FD</color>
+    <color name="light_blue_background">#E3F2FD</color>
+    <color name="red">#F44336</color>
+    <color name="light_blue_200">#81D4FA</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- New colors for file list -->
+    <color name="pdf_red">#FF5722</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+</resources>

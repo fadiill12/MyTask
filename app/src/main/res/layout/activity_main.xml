@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#E3F2FD"
+    android:padding="32dp">
+
+
+    <ImageView
+        android:layout_width="89dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="Logo Aplikasi"
+        android:src="@drawable/logomytask"
+        android:tint="#2196F3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang MyTask"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan pilih untuk melanjutkan"
+        android:textSize="16sp"
+        android:textColor="#64B5F6"
+        android:layout_marginBottom="48dp"
+        android:gravity="center" />
+
+    <!-- Container untuk Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Button Login -->
+        <LinearLayout
+            android:id="@+id/btnLogin"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_login_bg"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/loginuser"
+                android:tint="#FFFFFF"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Icon Login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="MASUK"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Button Register -->
+        <LinearLayout
+            android:id="@+id/btnRegister"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/button_register_bg"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logoadduser"
+                android:tint="#2196F3"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Icon Register" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAFTAR"
+                android:textColor="#2196F3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Footer Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Dengan melanjutkan, Anda menyetujui\nSyarat dan Ketentuan kami"
+        android:textSize="12sp"
+        android:textColor="#90CAF9"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp" />
+
+</LinearLayout>
