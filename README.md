@@ -41,11 +41,9 @@ protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.register_activity);
     
-    // Inisialisasi Firebase Database
     FirebaseDatabase database = FirebaseDatabase.getInstance("YOUR URL FIREBASE REALTIME DATABASE");
     databaseReference = database.getReference();
     
-    // Setup views dan listeners
     initViews();
     setupClickListeners();
 }
@@ -69,25 +67,20 @@ protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.login_activity);
         Log.d(TAG, "Layout set successfully");
         
-        // Inisialisasi SharedPreferences untuk session management
         sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         
-        // Cek apakah user sudah login sebelumnya
         if (isUserLoggedIn()) {
             navigateBasedOnRole();
             return;
         }
         
-        // Inisialisasi Firebase Database
         FirebaseDatabase database = FirebaseDatabase.getInstance("YOUR URL FIREBASE REALTIME DATABASE");
         databaseReference = database.getReference();
         Log.d(TAG, "Firebase initialized");
         
-        // Setup views dan listeners
         initViews();
         setupClickListeners();
         
-        // Handle data dari RegisterActivity
         Intent intent = getIntent();
         if (intent.hasExtra("registered_username")) {
             String username = intent.getStringExtra("registered_username");
