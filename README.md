@@ -112,7 +112,7 @@ private static final String BASE_URL = "http://YOUR IP VPS/PC WHERE BACKEND RUNN
 
 ### 📍 DashboardGuruActivity.java
 
-Konfigurasi backend untuk dashboard siswa dan fitur upload tugas:
+Konfigurasi backend untuk dashboard guru dan fitur load tugas dari siswa:
 
 ```java
 private static final String BASE_URL = "http://YOUR IP VPS/PC WHERE BACKEND RUNNING:3000/"; // Pastikan IP dan port sesuai
