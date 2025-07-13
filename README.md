@@ -30,7 +30,7 @@ Aplikasi Android untuk pengelolaan dan pengiriman tugas berbasis mobile dengan d
 
 ## 🔌 Firebase Configuration in Code
 
-### 📍 RegisterActivity.java
+## 📍 RegisterActivity.java
 
 ```java
 @Override
@@ -46,8 +46,9 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 
 
-📍 LoginActivity.java
+### 📍 LoginActivity.java
 
+```java
  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
