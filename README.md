@@ -102,6 +102,26 @@ protected void onCreate(Bundle savedInstanceState) {
 - Navigasi berdasarkan role pengguna (Siswa/Guru)
 - Auto-fill username dari RegisterActivity
 
+### 📍 DashboardSiswaActivity.java
+
+Konfigurasi backend untuk dashboard siswa dan fitur upload tugas:
+
+```java
+private static final String BASE_URL = "http://YOUR IP VPS/PC WHERE BACKEND RUNNING:3000/"; // Pastikan IP dan port sesuai
+```
+
+**Fungsi Utama DashboardSiswaActivity:**
+- Menampilkan dashboard siswa
+- Mengatur koneksi ke backend server untuk upload tugas
+- Mengelola form pemilihan kelas dan mata pelajaran
+- Mengupload file tugas ke Cloudinary melalui backend
+
+**Konfigurasi Backend URL:**
+- Ganti `YOUR IP VPS/PC WHERE BACKEND RUNNING` dengan IP address server backend Anda
+- Pastikan port sesuai dengan konfigurasi backend (default: 3000)
+- Contoh: `http://192.168.1.100:3000/` untuk local network
+- Contoh: `http://your-domain.com:3000/` untuk production server
+
 ---
 
 ## 🔐 Alur Autentikasi
@@ -202,10 +222,11 @@ Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_co
 ### 🔸 Setup Android App
 1. Buka project di Android Studio
 2. Ganti `"YOUR URL FIREBASE REALTIME DATABASE"` dengan URL Firebase Realtime Database Anda
-3. Buat file `network_security_config.xml` di folder `res/xml/` (lihat bagian Network Security Configuration)
-4. Tambahkan `android:networkSecurityConfig="@xml/network_security_config"` di AndroidManifest.xml
-5. Update URL backend di aplikasi Android (sesuaikan dengan IP/domain backend)
-6. Build dan jalankan aplikasi di device/emulator Android
+3. Update `BASE_URL` di `DashboardSiswaActivity.java` dengan IP/domain backend yang sesuai
+4. Buat file `network_security_config.xml` di folder `res/xml/` (lihat bagian Network Security Configuration)
+5. Tambahkan `android:networkSecurityConfig="@xml/network_security_config"` di AndroidManifest.xml
+6. Update URL backend di aplikasi Android (sesuaikan dengan IP/domain backend)
+7. Build dan jalankan aplikasi di device/emulator Android
 
 ### 🔸 Testing
 1. Pastikan backend berjalan di port 3000
@@ -223,6 +244,7 @@ Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_co
 - Backend harus berjalan sebelum menggunakan fitur upload di aplikasi Android
 - Simpan file `.env` dengan aman dan jangan commit ke repository publik
 - Untuk production, gunakan HTTPS dan implementasikan autentikasi yang lebih robust
+- Pastikan `BASE_URL` di `DashboardSiswaActivity` sesuai dengan server backend yang berjalan
 
 ---
 
@@ -240,3 +262,4 @@ Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_co
 - Pastikan `network_security_config.xml` sudah dikonfigurasi dengan benar
 - Untuk testing di emulator, gunakan IP `10.0.2.2:3000` sebagai URL backend
 - Untuk testing di device fisik, gunakan IP address komputer/server yang menjalankan backend
+- Pastikan `BASE_URL` di `DashboardSiswaActivity` sudah dikonfigurasi dengan benar
