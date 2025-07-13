@@ -113,13 +113,74 @@ protected void onCreate(Bundle savedInstanceState) {
 
 ---
 
+## 🖥️ Konfigurasi Backend
+
+### 📍 mytask-backend/.env
+
+Konfigurasi environment variables untuk backend Node.js:
+
+```env
+PORT=3000
+CLOUDINARY_CLOUD_NAME=YOUR CLOUDINARY NAME
+CLOUDINARY_API_KEY=YOUR API KEY
+CLOUDINARY_API_SECRET=YOUR API SECRET
+```
+
+**Penjelasan Environment Variables:**
+- `PORT`: Port server backend (default: 3000)
+- `CLOUDINARY_CLOUD_NAME`: Nama cloud Cloudinary Anda
+- `CLOUDINARY_API_KEY`: API Key dari dashboard Cloudinary
+- `CLOUDINARY_API_SECRET`: API Secret dari dashboard Cloudinary
+
+### 📍 Setup Backend
+
+1. **Install Dependencies**
+   ```bash
+   cd mytask-backend
+   npm install express multer cloudinary dotenv cors
+   ```
+
+2. **Struktur Folder Backend**
+   ```
+   mytask-backend/
+   ├── .env
+   ├── server.js
+   ├── package.json
+   └── uploads/ (temporary folder)
+   ```
+
+3. **Konfigurasi Cloudinary**
+   - Buat akun di [Cloudinary](https://cloudinary.com/)
+   - Dapatkan Cloud Name, API Key, dan API Secret dari dashboard
+   - Masukkan kredensial tersebut ke file `.env`
+
+### 📍 Endpoints Backend
+
+Backend menyediakan endpoint untuk:
+- `POST /upload`: Upload file tugas ke Cloudinary
+- `GET /files`: Mengambil daftar file berdasarkan kelas dan mata pelajaran
+
+---
+
 ## 🚀 Cara Menjalankan Aplikasi
 
+### 🔸 Setup Backend
 1. Clone repository ini
-2. Buka project di Android Studio
-3. Ganti `"YOUR URL FIREBASE REALTIME DATABASE"` dengan URL Firebase Realtime Database Anda
-4. Setup backend Node.js untuk integrasi Cloudinary
-5. Build dan jalankan aplikasi di device/emulator Android
+2. Masuk ke folder backend: `cd mytask-backend`
+3. Install dependencies: `npm install`
+4. Buat file `.env` dan isi dengan konfigurasi Cloudinary
+5. Jalankan server: `npm start` atau `node server.js`
+
+### 🔸 Setup Android App
+1. Buka project di Android Studio
+2. Ganti `"YOUR URL FIREBASE REALTIME DATABASE"` dengan URL Firebase Realtime Database Anda
+3. Update URL backend di aplikasi Android (biasanya `http://localhost:3000` untuk testing)
+4. Build dan jalankan aplikasi di device/emulator Android
+
+### 🔸 Testing
+1. Pastikan backend berjalan di port 3000
+2. Test endpoint upload menggunakan Postman atau tools sejenis
+3. Jalankan aplikasi Android dan test fitur upload tugas
 
 ---
 
@@ -129,3 +190,20 @@ protected void onCreate(Bundle savedInstanceState) {
 - File tugas hanya mendukung format JPG/PNG/JPEG
 - Implementasi keamanan menggunakan SHA-256 untuk password
 - Session management otomatis untuk pengalaman pengguna yang lebih baik
+- Backend harus berjalan sebelum menggunakan fitur upload di aplikasi Android
+- Simpan file `.env` dengan aman dan jangan commit ke repository publik
+- Untuk production, gunakan HTTPS dan implementasikan autentikasi yang lebih robust
+
+---
+
+## 🔧 Troubleshooting
+
+### Backend Issues:
+- Pastikan semua dependencies terinstall
+- Periksa konfigurasi `.env` sudah benar
+- Cek koneksi internet untuk akses ke Cloudinary
+
+### Android App Issues:
+- Pastikan URL Firebase sudah benar
+- Cek network permissions di AndroidManifest.xml
+- Verifikasi URL backend sesuai dengan server yang berjalan
