@@ -231,8 +231,8 @@ Untuk mengizinkan komunikasi HTTP dengan backend, buat file `network_security_co
 1. Buka project di Android Studio
 2. Ganti `"YOUR URL FIREBASE REALTIME DATABASE"` dengan URL Firebase Realtime Database Anda
 3. Update `BASE_URL` di `DashboardSiswaActivity.java` dengan IP/domain backend yang sesuai
-4. Buat file `network_security_config.xml` di folder `res/xml/` (lihat bagian Network Security Configuration)
-5. Tambahkan `android:networkSecurityConfig="@xml/network_security_config"` di AndroidManifest.xml
+4. Update `BASE_URL` di `DashboardGuruActivity.java` dengan IP/domain backend yang sesuai
+5. Buat file `network_security_config.xml` di folder `res/xml/` (lihat bagian Network Security Configuration)
 6. Update URL backend di aplikasi Android (sesuaikan dengan IP/domain backend)
 7. Build dan jalankan aplikasi di device/emulator Android
 
